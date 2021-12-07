@@ -1,0 +1,5 @@
+#files to ignore for commits
+
+
+#notebook files
+*__pycache__/*
