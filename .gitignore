@@ -3,3 +3,6 @@
 
 #notebook files
 *__pycache__/*
+
+#this annoying submodule
+spr/src/rlpyt/.git/*
