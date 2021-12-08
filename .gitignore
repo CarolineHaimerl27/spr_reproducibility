@@ -6,3 +6,7 @@
 
 #this annoying submodule
 spr/src/rlpyt/.git/*
+
+#slurm job files
+*.err
+*.out
