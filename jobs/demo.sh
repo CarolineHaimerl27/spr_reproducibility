@@ -30,5 +30,7 @@ cmd="python -mu scripts.run --public --game pong --momentum-tau 1."
 singularity exec --nv \
 	    --overlay $ovfile:ro $singfile /bin/bash -c "source $condaenv; $cmd"
 
+echo "done"
+
 
 
