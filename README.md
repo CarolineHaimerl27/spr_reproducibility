@@ -17,3 +17,5 @@ git branch -d [branch name]
 
 to see all branches created
 git branch -a
+
+[Running log of issues](https://docs.google.com/document/d/17vGnCX7yZR3KKBifrHasRHKHJLIPusClNHFhkvShqyQ/edit) we noticed with the original code
