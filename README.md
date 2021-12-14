@@ -18,6 +18,9 @@ git branch -d [branch name]
 to see all branches created
 git branch -a
 
+
+[Running log of issues](https://docs.google.com/document/d/17vGnCX7yZR3KKBifrHasRHKHJLIPusClNHFhkvShqyQ/edit) we noticed with the original code
+
 ## basic directory structure
 
 - `spr/`: original code we are trying to recreate
@@ -26,3 +29,4 @@ git branch -a
 - `studies/`:notebooks and python code to try out ideas. The buildup code to full demos or code we want to present to run stuff.
 - `vis/`: important visualization code
 - `utils/`: extra code without a good place to go. includes instructions for singularity setup
+
