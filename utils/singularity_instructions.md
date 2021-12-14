@@ -26,7 +26,7 @@ For tensorflow is it `/scratch/work/public/singularity/cuda11.0-cudnn8-devel-ubu
 - To setup conda environment, fist launch container interactively, download conda, and make a script to load it on starting the singularity environment. 
 This is the basic structure of the command to start singularity:
 ```
-singularity exec --overlay overlay-10GB-400K.ext3.gz /scratch/work/public/singularity/cuda11.1-cudnn8-devel-ubuntu18.04.sif /bin/bash
+singularity exec --overlay overlay-10GB-400K.ext3 /scratch/work/public/singularity/cuda11.1-cudnn8-devel-ubuntu18.04.sif /bin/bash
 ```
 
 - Now inside the container, download and install miniconda into `/ext3/miniconda3`
