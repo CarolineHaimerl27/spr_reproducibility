@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=2:00:00
+#SBATCH --time=8:00:00
 #SBATCH --mem=25GB
 #SBATCH --job-name=spr_demo
 #SBATCH --mail-type=END
@@ -24,7 +24,7 @@ condaenv=/ext3/env.sh
 #what specific command are you running
 wkdir=/scratch/$user/spr_reproducibility/spr/
 cd $wkdir
-cmd="python -mu scripts.run --public --game pong --momentum-tau 1."
+cmd="python -u -m scripts.run --public --game pong --momentum-tau 1."
 
 #run the singularity bash command
 singularity exec --nv \
