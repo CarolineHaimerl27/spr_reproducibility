@@ -67,7 +67,7 @@ pip install atari-py
 - Get the ROMS and an archiving tool to open them
 
 ``` 
-wget http://www.atarimania.com/roms/Roms.rar\expnd0\expndtw0\kerning0
+wget http://www.atarimania.com/roms/Roms.rar
 conda install -c conda-forge go-archiver
 arc unarchive Roms.rar
 python -m atari_py.import_roms Roms
