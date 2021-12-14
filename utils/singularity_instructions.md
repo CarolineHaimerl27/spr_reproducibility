@@ -9,7 +9,7 @@ We are going to build one up, then interactively run a job on the cluster to tes
 
 ```
 user=dh148 #change this to your netid
-cd /scratch/$user/singularity 
+cd /scratch/$user
 mkdir -p  singularity
 cd singularity 
 ```
