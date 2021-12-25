@@ -132,12 +132,17 @@ if __name__ == "__main__":
     parser.add_argument('--cuda_idx', help='gpu to use ', type=int, default=0)
     parser.add_argument('--max-grad-norm', type=float, default=10., help='Max Grad Norm')
     parser.add_argument('--public', action='store_true', help='If set, uses anonymous wandb logging')
+    parser.add_argument('--wandb_name', type=str, default='')
     args = parser.parse_args()
 
     if args.public:
-        wandb.init(anonymous="allow", config=args, tags=[args.tag] if args.tag else None, dir=args.wandb_dir)
+        wandb.init(anonymous="allow", config=args, tags=[args.tag] if args.tag else None,
+                   name=args.wandb_name if args.dandb_name else None, dir=args.wandb_dir)
     else:
-        wandb.init(project=args.project, entity=args.entity, config=args, tags=[args.tag] if args.tag else None, dir=args.wandb_dir)
+        wandb.init(project=args.project, entity=args.entity, config=args,
+                   tags=[args.tag] if args.tag else None,
+                   name=args.wandb_name if args.dandb_name else None,
+                   dir=args.wandb_dir)
     wandb.config.update(vars(args))
     build_and_train(game=args.game,
                     cuda_idx=args.cuda_idx,
