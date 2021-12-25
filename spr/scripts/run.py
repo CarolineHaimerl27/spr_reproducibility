@@ -137,7 +137,7 @@ if __name__ == "__main__":
 
     if args.public:
         wandb.init(anonymous="allow", config=args, tags=[args.tag] if args.tag else None,
-                   name=args.wandb_name if args.dandb_name else None, dir=args.wandb_dir)
+                   name=args.wandb_name if args.wandb_name else None, dir=args.wandb_dir)
     else:
         wandb.init(project=args.project, entity=args.entity, config=args,
                    tags=[args.tag] if args.tag else None,
