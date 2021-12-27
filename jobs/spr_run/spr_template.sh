@@ -28,7 +28,10 @@ seed=SEED
 game=GAME
 jumps=JUMPS
 fname=${game}_j${jumps}_${seed}
+
+#set some wandb stuff
 export WANDB_ENTITY="spr_reproducibility"
+export WANDB_PROJECT="spr_run"
 
 cmd="python -u -m scripts.run --public --game $game --jumps $jumps --seed $seed --momentum-tau 1. --wandb_name $fname"
 
