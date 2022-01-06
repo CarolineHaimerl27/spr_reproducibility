@@ -42,6 +42,10 @@ sh Miniconda3-latest-Linux-x86_64.sh -b -p /ext3/miniconda3
 source /ext3/miniconda3/etc/profile.d/conda.sh
 export PATH=/ext3/miniconda3/bin:$PATH
 ```
+Copy and paste the above text into
+```
+vim /ext3/env.sh
+```
 
 - To active base conda
 `source /ext3/env.sh`
@@ -67,7 +71,7 @@ pip install atari-py
 - Get the ROMS and an archiving tool to open them
 
 ``` 
-wget http://www.atarimania.com/roms/Roms.rar\expnd0\expndtw0\kerning0
+wget http://www.atarimania.com/roms/Roms.rar
 conda install -c conda-forge go-archiver
 arc unarchive Roms.rar
 python -m atari_py.import_roms Roms
@@ -93,6 +97,7 @@ singularity exec --nv   --overlay $ovfile:ro $singfile /bin/bash
 
 - Once you are the container, try running the SPR code:
 ```
+user=dh148
 source /ext3/env.sh
 cd /scratch/$user/spr
 python -m scripts.run --public --game pong --momentum-tau 1. 
