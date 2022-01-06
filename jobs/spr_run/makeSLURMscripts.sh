@@ -2,7 +2,7 @@
 
 
 #generates the slurm shell scripts for varying jumps and varying game
-wkdir="/Users/dhocker/projects/spr_reproducibility/jobs"
+wkdir="/scratch/dh148/spr_reproducibility/jobs"
 
 cat $wkdir/gamelist
 
